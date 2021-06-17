@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-17T05:57:22.335Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36" etag="4FdKj-i2xENtA3qLAHe8" version="14.7.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-17T06:00:08.757Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36" etag="f057bus0cp0rm8NIN00g" version="14.7.8" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1303" dy="1120" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -13,7 +13,7 @@
         <mxCell id="3rIbACJ9UXFU00rvkkpQ-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="3rIbACJ9UXFU00rvkkpQ-0">
           <mxGeometry y="170" width="230" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="3rIbACJ9UXFU00rvkkpQ-3" value="+ boolean authenticateUser(String pin)&#xa;+ void handleTransaction(Transaction t)&#xa;- void findAccount(Card c)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="3rIbACJ9UXFU00rvkkpQ-0">
+        <mxCell id="3rIbACJ9UXFU00rvkkpQ-3" value="+ boolean authenticateUser(String pin)&#xa;+ TransactionStatus handleTransaction(Transaction t)&#xa;- void findAccount(Card c)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="3rIbACJ9UXFU00rvkkpQ-0">
           <mxGeometry y="178" width="230" height="52" as="geometry" />
         </mxCell>
         <mxCell id="3rIbACJ9UXFU00rvkkpQ-5" value="CardReader" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -214,7 +214,7 @@
         <mxCell id="3rIbACJ9UXFU00rvkkpQ-74" value="Transaction" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="680" y="160" width="160" height="112" as="geometry" />
         </mxCell>
-        <mxCell id="3rIbACJ9UXFU00rvkkpQ-75" value="- int transactionId&#xa;- TransactionStatus status&#xa;- Date creationDate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="3rIbACJ9UXFU00rvkkpQ-74">
+        <mxCell id="3rIbACJ9UXFU00rvkkpQ-75" value="- int transactionId&#xa;- Date creationDate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="3rIbACJ9UXFU00rvkkpQ-74">
           <mxGeometry y="26" width="160" height="52" as="geometry" />
         </mxCell>
         <mxCell id="3rIbACJ9UXFU00rvkkpQ-76" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="3rIbACJ9UXFU00rvkkpQ-74">
@@ -318,6 +318,12 @@
             <mxPoint x="590" y="810" as="sourcePoint" />
             <mxPoint x="500" y="760" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="3rIbACJ9UXFU00rvkkpQ-109" value="«Enumeration»&lt;br&gt;&lt;b&gt;TransactionType&lt;br&gt;&lt;/b&gt;&lt;br&gt;Balance Inquiry&lt;br&gt;Deposit Cash&lt;br&gt;Deposit check&lt;br&gt;Withdraw cash&lt;br&gt;Transfer funds" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="360" y="20" width="110" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="3rIbACJ9UXFU00rvkkpQ-110" value="«Enumeration»&lt;br&gt;&lt;b&gt;TransactionStatus&lt;br&gt;&lt;/b&gt;&lt;br&gt;SUCCESS&lt;br&gt;FAIL&lt;br&gt;" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="500" y="20" width="110" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
